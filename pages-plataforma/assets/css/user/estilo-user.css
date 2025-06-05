@@ -1,0 +1,238 @@
+@import '../global-plataform.css';
+body{
+	font-family: "Georgia";
+}
+
+header{
+	flex-flow: column nowrap;
+	align-content: center;
+	align-items: center;
+}
+header{
+	position: relative;
+	background-color: #fffb42;
+	padding: 5px 0px;
+	color: white;
+	width: 10;
+}
+header ul{
+	border-top: 1px solid black;
+}
+header li{
+	border: 1px solid white;
+}
+header li a figure{
+	display: flex;
+	align-content: center;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	border-bottom: 1px solid black;
+	color: #183059;
+	padding: 0px 5px;
+}
+header figure img{
+	padding: 10px;
+	width: 60px;
+	height: 60px;
+}
+header figcaption{
+	font-style: small-caps;
+	text-align: left;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+header figcaption:hover{
+	text-decoration: underline;
+	transition: .8s linear;
+}
+header figcaption:hover figure{
+	background: #183059;
+}
+.container{
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+}
+.ss-banner{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.3);
+}
+.ss-banner .banner{
+	background-color: #313131;
+	opacity: 0.7;
+	display: block;
+	width: 100%;
+	height: 360px;
+}
+.ss-banner .banner img{
+	z-index: ;
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+}
+form{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-30%);
+	display: flex;
+	flex-direction: column;
+	align-content:center;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+}
+.ss-banner form span{
+	display: block;
+	font-size: 1.6em;
+  	color: #FFF;
+  	font-weight: bold;
+  	padding-bottom: 10px;
+}
+
+.input-form{
+  display: flex;
+  width: 400px;
+  margin-left: 8px;
+  border: 1px solid #fffb42;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.ss-banner input{
+  border: none;
+  width: 90%;
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+.ss-banner button{
+  background-color: #fff;
+  border-radius: 5px;
+  border: none;
+  width: 35px;
+  height: 38px;
+}
+.ss-banner .lupa{
+  display: block;
+  margin: 0px auto;
+  width: 25px;
+  height: 25px;
+}
+
+.container-banner{
+	display: flex;
+	flex-flow: row nowrap;
+	align-content: center;
+	align-items: center;
+	position: absolute;
+	top: 92%;
+	left: 50%;
+	transform: translate(-50%,-92%);
+}
+.ss-sub-banner{
+	width: 420px;
+	display: flex;
+	flex-flow: row nowrap;
+	align-content: center;
+	align-items: center;
+	padding: 5px;
+}
+.ss-sub-banner div{
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: center;
+	text-align: left;
+}
+.ss-sub-banner figure{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid #183059;
+	margin-right: 10px;
+}
+.ss-sub-banner figure img{
+	width: 100%;
+	height: 100%;
+}
+.ss-social-banner ul{
+	display: flex;
+	flex-flow: row nowrap;
+	align-content: center;
+	align-items: center;
+	margin-left: 5px;
+}
+.ss-social-banner figure{
+	text-align: center;
+	margin-right: 5px;
+}
+.ss-social-banner figure img{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin: 0px auto;
+}
+.ss-cursos,.ss-conteudos{
+	text-align: center;
+}
+h2{
+	background-color: #183059;
+	color: #fffb42;
+	text-align: left;
+	margin: 30px 0px 10px 10px;
+	padding: 8px 0px 8px 10px;
+}
+.ss-card article{
+	text-align: left;
+	display: inline-block;
+	width:  280px;
+	height: 300px;
+	box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.3);
+	border: none;
+	border-radius: 15px;
+	margin: 10px 10px;
+}
+.ss-card article figure{
+	position: relative;
+	width: 100%;
+	height: 60%;
+}
+.ss-card article figure img{
+	width: 100%;
+	height: 100%;
+	border-radius: 15px 15px 0px 0px;
+	border: 1px solid black;
+}
+.ss-card figcaption{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -30%);
+}
+.ss-card p{
+	text-align: justify;
+	padding: 5px;
+}
+.ss-card a{
+	text-align: left;
+	padding: 5px;
+}
+/*
+.banner{
+	position: relative;
+	background-color: #313131;
+	width: 100%;
+	height: 400px;
+}
+.banner h1,span{
+	position: absolute;
+	color: white;
+}
+h1{
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-30%);
+}
+form

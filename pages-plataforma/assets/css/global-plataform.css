@@ -1,0 +1,86 @@
+*{margin: 0px; padding: 0px; box-sizing: border-box; font-family: "Georgia";}
+:root{
+	--verde: #4caf50;
+	--preto: #222222;
+	--branco: #fff;
+}
+@font-face{
+	font-family: "roboto-reg";
+	src: url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
+}
+body{
+	font-family: "roboto-reg";
+}
+a{text-decoration: none ; color: black; cursor: pointer;}
+ul{list-style-type: none;}
+button,select{cursor: pointer}
+
+dialog::backdrop{
+	background-color: rgba(0, 0, 0, 0.4);
+}
+dialog{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+	border-radius: 15px;
+}
+dialog p{
+	margin-top: 10px;
+}
+dialog #erro{
+	margin: 10px 0px;
+	color: red;
+	font-weight: bolder;
+	font-size: 24px;
+}
+dialog button{
+	margin-top: 10px;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+	border: none;
+	border-radius: 15px;
+	background-color: #4caf50;
+	color: white;
+}
+.flex-row{
+	display: flex;
+	flex-flow: row nowrap;
+}
+.flex-column{
+	display: flex;
+	flex-flow: column nowrap;
+}
+.just-b{
+	justify-content: space-between;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+.oculto{
+	display: none;
+}
+.none-text{
+	color: 313131;
+	font-size: 2.2em;
+	text-align: center;
+	font-weight: bold;
+	padding: 30px 0px;
+}
+.wrong-text{
+	color: white;
+	font-size: 2.2em;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px 0px;
+}
+
+.erro-campo{
+	border: 1px solid #ff0000ce;
+}

@@ -1,0 +1,327 @@
+@import 'global.css';
+@import 'modal-erro.css';
+:root{
+	--verde: #4caf50;
+	--preto1: #313131;
+	--preto2: #222222;
+	--branco: #fff;
+	--verde-2: #35ee35;
+	--sombra-verde: rgba(53,283,53,0.7);
+}
+body{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	align-content: center;
+	/*background-image: url('../img/fundo@1.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;*/
+}
+header{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+	font-weight: lighter;
+}
+.erro-php {
+    padding: 15px;
+    text-align: center;
+    margin: 2% auto;
+    width: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+    border-radius: 10px;
+	background-color: rgb(228, 39, 39);
+	color: white;
+}
+.erro-php span{
+	font-size: 25px;
+	padding-bottom: 5px;
+}
+.erro-php p{
+	font-size: 20px;
+}
+h1,h2{
+
+	color: var(--verde);
+}
+h1{
+	padding: 20px 0px 10px 0px;
+}
+
+.container{
+	position: relative;
+	width: 100%;
+	height: 500px;
+}
+form{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 15px;
+	box-shadow: 0px 0px 15px rgba(53,283,53,0.7);
+	padding: 10px;
+}
+.form-login{
+	width: 30%;
+}
+
+.container fieldset{
+	padding: 15px 0px;
+	border: none;
+}
+.form-login label{
+	color:#222222;
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	font-size: 20px;
+	padding: 5px 0;
+}
+.form-login input, #entrar{
+	border: 1px solid rgba(0,0,0,0.3);
+	margin: 0 auto 10px auto;
+	width: 80%;
+	display: block;
+	padding: 10px 5px; 
+	font-size: 18px;
+	border-radius: 10px;
+	outline: none;
+}
+#entrar{
+	background-color: var(--verde-2);
+	color: var(--branco);
+}
+#entrar:hover{
+	opacity: 0.9;
+	transition: 0.7s ease-out;
+}
+legend{
+	padding: 15px 0px;
+	text-align: center;
+	font-size: 25px;
+}
+.form-login .forgot{
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	text-align: right;
+	padding-bottom: 10px;
+}
+.form-login p{
+	margin: 5px auto;
+	width: 80%;
+	text-align: right;
+}
+.form-login a{
+	color: rgb(100,100,240);
+}
+input{
+	color: #4caf50;
+}
+input:focus{
+	transition: .5s ease-in;
+	border: 1px solid var(--verde-2);
+	box-shadow: 1px 1px 9px rgba(53,283,53,0.7);
+}
+select{
+	padding: 5px 3px;
+	font-size: 14px;
+}
+/*secao de cadastro*/
+.form-cadastro{
+	width: 50%;
+}
+
+.form-cadastro .box label{
+	display: inline-block;
+	width: 150px; 
+	text-align: right;
+}
+.form-cadastro .box input{
+	display: inline-block;
+	padding: 10px; 
+	margin: 5px auto;
+	width: 60%;
+	font-size: 15px;
+	border-radius: 10px;
+	outline: none;
+	border: 1px solid rgba(0,200,0,0.3);
+}
+.box-1 .lbl{
+	width: 480px;
+}
+.dados{
+	padding: 10px 0px;
+}
+/*
+.dados-3{
+	display: block;
+	margin: 10px auto;
+	width: 88%;
+}*/
+.tipo{
+	margin-left: 10px;
+	display: inline-block;
+}
+.tipo select{
+	display: block;
+}
+.genero{
+	text-align: center;
+	display: inline-block;
+	margin-left: 10px;
+}
+.genero label{
+	display: inline-block;
+}
+.genero input{
+	margin: 0 auto;
+}
+#endereco{
+	width: 55%;
+}
+#codigo{
+	width: 35%;
+}
+.form-footer{
+	position: relative;
+	height: 48px;
+	padding: 5px;
+}
+.form-footer p{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+}
+.form-footer a{
+	color: white;
+	display: inline-block;
+	padding: 5px;
+}
+.form-footer .a-ativo{
+	color: var(--verde-2);
+	font-weight: bold;
+}
+.btn{
+	position: absolute;
+	right: 0px;
+	display: block;
+	width: 150px;
+	padding: 10px;
+	text-align: center;
+	background-color: #31ad31;
+	color: white;
+	cursor: pointer;
+	border: none;
+	border-radius: 15px;
+	font-size: 14px;
+	font-weight: bold;
+}
+/*
+#nomeUser{
+	width: 65%; 
+}
+#email{
+	width: 75%;
+}
+#senha{
+	width: 60%;
+}*/
+#telefone{
+	width: 45%;
+}
+#escolaridade{
+	width: 50%;
+}
+
+.box-dados-user{
+	width: 300px;
+	margin-left: 10px;
+	justify-content: space-between;
+}
+.box-dados-user label{
+	padding-top: 10px;
+}
+.box-dados-user input{
+	display: block;
+	margin-bottom: 5px;
+	padding: 10px 5px;
+	font-size: 15px;
+	border-radius: 10px;
+	outline: none;
+	border: 1px solid green;
+}
+#lbl-foto{
+	background: rgba(0,0,0,0.5);
+	display: inline-block;
+	width: 100px;
+	padding: 10px;
+	height: 100px;
+	border-radius: 15px;
+	border: 3px dashed white;
+	cursor: pointer;
+}
+#lbl-desc{
+	display: block;
+	width: 80%;
+	margin: 10px auto 2px auto;
+	padding: 10px;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 16px;
+	color: var(--verde-2);
+}
+textarea{
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+	height: 150px;
+	padding: 10px 5px;
+	border: none;
+	outline: none;
+}
+textarea{
+	outline: 1px solid green;
+}
+#foto{
+	display: none;
+}
+
+footer{
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+	color: var(--verde-2);
+	justify-content: space-between;
+}
+footer li{
+	margin: 0px auto;
+}
+footer ul a{
+	color: var(--verde-2);
+	display: block;
+	width: 150px;
+	text-align: center;
+	padding: 5px;
+	text-decoration: underline;
+	font-weight: lighter;
+	font-size: 14px;
+}
+/*classes de visibilidade*/
+.oculto{
+	display: none;
+}
+.mostra{
+	display: block;
+}

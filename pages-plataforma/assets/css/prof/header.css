@@ -1,0 +1,35 @@
+.hd-sub-menu li{
+	border: none;
+}
+.hd-sub{
+	transition: 0.7s ease;
+	margin-top: 20px;
+}
+.hd-sub, .hd-sub-menu{
+	 width: 100%;
+}
+.hd-sub-menu a{
+	border-right: 1px solid #4caf50;	
+	margin-left: 5px;
+	display: block;
+	padding: 5px 10px;
+	font-size: 18px;
+}
+
+.menu-hd{
+	position: fixed;
+	top: 28%;
+	color: white;
+	padding: 0px;
+}
+.menu-hd li{
+	border-top: 1px solid white;
+}
+.menu-hd a{
+	display: block;
+	padding: 10px;
+	font-size: 16px;
+	text-align: center;
+	color: white;
+	font-weight: 500px;
+}

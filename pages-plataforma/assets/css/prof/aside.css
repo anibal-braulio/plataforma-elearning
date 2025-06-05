@@ -1,0 +1,16 @@
+.aside{
+	position: sticky;
+	width: 160px;
+	height: 1028px;
+	background-color: #4caf50;
+	color: white;
+	padding: 10px 10px 0px 10px;
+}
+.aside div figure img{
+	border-radius: 5px;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+.aside .form-logout{
+	position: fixed;
+	bottom: 2px;
+}
