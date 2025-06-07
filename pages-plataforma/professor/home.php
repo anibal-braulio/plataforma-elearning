@@ -99,7 +99,7 @@
 		 		</ul>
 		 	</nav>
 		</header>
-		<section class="container-cursos center">
+		<section class="container-cursos flex-column just-b">
 			<section class="ranking flex-column center just-b">
 				<article>
 					<h2>Meus Pontos</h2>
@@ -152,25 +152,20 @@
 					</div>
 				</section>
 			</section>
-			<main class="">
-				<div>
-					<figure>
-			 			<img src="#">
-			 		</figure>
-			 		<p>Nome do usuario</p>
-				</div>
 		</section>
-		<section class="flex-column center just-b">
-			<article>
+		<section class="flex-column center">
+			<article class="ctn-universi flex-column center">
 				<h3>A Universidade Tocoista</h3>
 				<figure>
-					<img src="universidade.jpg">
+					<img src="../assets/img/universidade.jpg">
 				</figure>
-				<h3>Universidade Tocoista, <a href="">visite o site</a></h3>
-				<h3>A igreja Tocoista, <a href="">visite o site</a></h3>
-				<h3>A historia por tras de tudo isso, <a href="">visite o site</a></h3>
+				<ul class="flex-column just-b">
+					<li>Universidade Tocoista, <a href="">visite o site</a></li>
+					<li>A igreja Tocoista, <a href="">visite o site</a></li>
+					<li>A historia por tras de tudo isso, <a href="">visite o site</a></li>
+				</ul>
 			</article>
-			<footer class="ctn-conversas flex-row center just-b">
+			<!--<footer class="ctn-conversas flex-row center just-b">
 				<section class="ctt-footer ctt-conversas flex-column center">
 					<div class="box-1 box-sms flex-row center just-b">
 						<h2>Conversas</h2>
@@ -267,7 +262,7 @@
 						</section>
 					</div>
 				</section>
-			</footer>
+			</footer>-->
 		</section>
 	</section>
 </section>

@@ -1,10 +1,15 @@
 @import '../global-plataform.css';
 @import 'cadastro-curso.css';
 @import 'aside.css';
+header{
+	position: sticky;
+	top: 0px;
+}
 header li{
 	border: 1px solid white;
 }
 .body{
+	position: relative;
 	padding: 5px;
 	width: 100%;
 	height: 100vh;
@@ -35,11 +40,12 @@ header li{
 	height: 30px;
 }
 .menu-header figcaption{
+	font-weight: 100px;
 	width: 100px;
 	color: white;
 	margin-left: 10px;
 	text-align: left;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .box-user figcaption, .box-user h3,.box-user p{ 
@@ -177,36 +183,38 @@ section h2{
 	width: 100%;
 	height: 100%;
 }
-/*.content-1{
+.content{
+	padding: 20px 0px;
+	margin: 30px 0px;
+}
+.ctn-universi{
 	width: 100%;
+	padding: 10px 5px;
+	padding-bottom: 0px;
+}
+.ctn-universi h3{
+	margin: 10px 0px;
+}
+.ctn-universi figure{
+	width: 100%;
+	height: 400px;
+	background-color: blue;
+}
+.ctn-universi img{
+	width: 100%;
+	height: 100%;
+}
+.ctn-universi ul{
 	padding: 10px 0px;
 }
-.content-1 article{
-	padding: 10px 5px;
-	width: 350px;
-	border: none;
-	border-radius: 15px;
-	box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+.ctn-universi ul li{
+	padding: 5px 0px;
 }
-.content-1 h2{
-	padding-bottom: 10px; 
+.ctn-universi ul li a{
+	display: inline-block;
+	color: blue;
+	text-decoration: underline;
 }
-.ctt{
-	width: 75%;
-}
-.ctt-curso{
-	padding: 10px 5px 10px 0px;
-	width: 100%;
-	gap: 30px;
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	align-content: center;
-}
-.ctt h2{
-	display: block;
-}*/
-
 .curso{
 	width: 300px;
 	border-radius: 5px;
@@ -255,6 +263,9 @@ section h2{
 #btnComprar{
 	background-color: #4caf50;
 	color: white;
+}
+footer{
+	position: sticky;
 }
 footer figure{
 	padding: 5px;
@@ -349,15 +360,7 @@ footer img{
 	padding: 10px;
 	box-shadow: 1px 1px 15px rgba(53,283,53,0.7);
 }
-.pnl-cursos article{
-	font-style: 14px;
-	color: white;
-	padding: 10px;
-	width: 100%;
-	border-radius: 15px;
-	background: rgba(53,283,53,0.7);
-	margin-top: 10px;
-}
+
 .mk-btn{
 	position: fixed;
 	z-index: 2;

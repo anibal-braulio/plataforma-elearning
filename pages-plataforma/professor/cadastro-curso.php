@@ -28,7 +28,7 @@
 							</select></label>
 
 							<label>Nivel acesso
-								<select name="nivel">
+					 			<select name="nivel">
 								<option value="privado">Privado</option>
 								<option value="Publico">Publico</option>
 								<option value="restrito">Restrito</option>
