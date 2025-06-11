@@ -58,3 +58,139 @@
     cursor: pointer;
 }
 
+.form-criacao {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 800px;
+}
+fieldset{
+    width: 100%;
+}
+/* Título */
+form h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Inputs e labels */
+.banner{
+    padding: 10px ;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white !important;
+    cursor: pointer;
+}
+.banner label{
+    padding-top: 10px;
+    color: white !important;
+    cursor: pointer;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea,
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+select{
+    width: 200px;
+}
+#titulo{
+    width: 300px
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Ocultar campos dinamicamente */
+.oculto {
+  display: none;
+}
+
+/* Botão de envio */
+button#salvar {
+  background-color: #3498db;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button#salvar:hover {
+  background-color: #2980b9;
+}
+
+/* Flex containers */
+.form .flex-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form .flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form .just-b {
+  justify-content: space-between;
+}
+
+.form .center {
+  align-items: center;
+}
+
+/* Upload de vídeos com ícone */
+label.upload-videos {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  font-weight: 600;
+  color: #2d3436;
+  background: #ecf0f1;
+  padding: 10px 16px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+label.upload-videos:hover {
+  background: #dcdde1;
+}
+
+/* Responsive */
+@media screen {
+    
+}
