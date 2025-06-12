@@ -11,17 +11,17 @@
 			 	</form>
 			 	<nav>
 			 		<ul class="item-menu flex-row">
-			 			<li><a href="">
+			 			<li><a href="chat.php">
 			 				<figure>
 			 					<img loading="lazy" src="../../assets/img/icons/chat@50.png">
 			 				</figure>
 			 			</a></li>
-			 			<li><a href="">
+			 			<li><a href="notify.php">
 			 				<figure>
 			 					<img loading="lazy" src="../../assets/img/icons/notify.png">
 			 				</figure>
 			 			</a></li>
-			 			<li><a href="">
+			 			<li><a href="config.pph">
 			 				<figure>
 			 					<img loading="lazy" src="../../assets/img/icons/config.png">
 			 				</figure>
@@ -32,25 +32,25 @@
 		 	<section class="hd-sub flex-row center">
 			 	<nav>
 				<ul class=" hd-sub-menu flex-row center just-b">
-					<li><a href="home.php">
+					<li><a href="../professor/home.php">
 						Pagina inicial
 					</a></li>
 					<li><a href="#">
 						Dashboard
 					</a></li>
-					<li><a href="meus-cursos.php">
+					<li><a href="../professor/meus-cursos.php">
 						Cursos
 					</a></li>
-					<li><a href="chat.php">
+					<li><a href="../professor/chat.php">
 						Chat
 					</a></li>
-					<li><a href="#">
+					<li><a href="../professor/Biblioteca.php">
 						Biblioteca
 					</a></li>
-					<li><a href="#">
+					<li><a href="../professor/avaliacao.php">
 						Avaliação
 					</a></li>
-					<li><a href="#">
+					<li><a href="../professor/.php">
 						Status
 					</a></li>
 				</ul>

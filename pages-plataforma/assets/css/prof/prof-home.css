@@ -384,3 +384,9 @@ footer img{
 	font-size: 2.2em;
 	font-family: "Georgia";
 }
+.link-img{
+	border: 1px solid black;
+	background-color: red;
+	cursor: pointer;
+	display: block;
+}

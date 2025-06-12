@@ -8,8 +8,8 @@
 		</div>
 		<nav>
             <ul class="menu-hd flex-column center">
-				<li><a href="cadastro-curso.php">Disponiveis</a></li>
-                <li><a href="cadastro-curso.php">Publicar</a></li>
+				<li><a href="cadastro-biblioteca.php">Disponiveis</a></li>
+                <li><a href="cadastro-biblioteca.php">Publicar</a></li>
 				<li><a href="meus-cursos.php">Que publiquei</a></li>
 				<li><a href="inscritos.php">Guardados</a></li>
 				<li><a href="assitidos.php">A ler</a></li>
