@@ -1,9 +1,9 @@
 <?php 
 	$descricao_pagina = "tela inicial de boas vindas ao professor da plataforma elearning";
 	$titulo = "Cursos Inscritos | Professor";
-	$url_css = "../assets/css/prof/cursos.css";
+	$url_css = "../assets/css/prof/inscritos.css";
 	$url_js2 = "../assets/js/jquery.js";
-	$url_js1 = "../assets/js/curso.js";
+	$url_js1 = "../assets/js/curs.js";
 	require_once "../templates/head.php";
 ?>
 <section class="body flex-row">
@@ -11,7 +11,7 @@
 	<section class="conteudo">
 		<?php require_once "../templates/header.php"?>
 		<section class="content-mk-curso">
-			<form id="mkForm" class="form-criacao" action="../../backend/controllers/dados-cad-curso.php" method="post" enctype="multipart/form-data">
+			<form id="mkForm" class="form form-criacao" action="../../backend/controllers/dados-cad-curso.php" method="post" enctype="multipart/form-data">
 				<fieldset>
 					<legend><h1>Painel de Criação de Curso</h1></legend>
 
@@ -22,7 +22,7 @@
 					</label>
 
 					<label for="videos" class="upload-videos">
-						<img src="../assets/img/icons/pasta.png" alt="Upload Vídeos">
+						<img src="../assets/img/icons/pasta.png">
 						<span>Adicionar Vídeos</span>
 						<input type="file" name="videos[]" id="videos" multiple accept="video/*" hidden>
 					</label>
@@ -31,7 +31,7 @@
 					<!-- Upload de Banner -->
 					<div class="banner flex-row center just-b">
 					<label for="banner">Banner do Curso
-						<input type="file" id="banner" name="banner" accept="image/*" >
+						<input type="file" id="banner" name="banner" accept="image/*" hidden>
 					</label>
 					</div>
 
@@ -39,7 +39,7 @@
 					<div class="flex-column center just-b">
 					<label for="estado">Estado:
 						<select id="estado" name="estado" >
-						<option value="" disabled selected>Selecione</option>
+						<option value="selecione" disabled selected>Selecione</option>
 						<option value="terminado">Terminado</option>
 						<option value="em curso">Em curso</option>
 						</select>
@@ -47,7 +47,8 @@
 
 					<label for="acesso">Acesso:
 						<select id="acesso" name="acesso" >
-						<option value="publico" selected>Público</option>
+						<option value="selecione" disabled selected>Selecione</option>
+						<option value="publico">Público</option>
 						<option value="privado">Privado</option>
 						<option value="restrito">Restrito</option>
 						</select>
@@ -55,7 +56,8 @@
 
 					<label for="tipo">Tipo:
 						<select id="tipo" name="tipo" onchange="document.getElementById('preco').classList.toggle('oculto', this.value !== 'pago')">
-						<option value="gratis" selected>Grátis</option>
+							<option value="selecione" disabled selected>Selecione</option>
+						<option value="gratis">Grátis</option>
 						<option value="pago">Pago</option>
 						</select>
 					</label>
@@ -68,7 +70,7 @@
 					<label for="desc">Descrição do Curso:</label>
 					<textarea name="desc" id="desc" placeholder="Dê uma boa descrição do seu curso para atrair alunos" rows="4" ></textarea>
 
-					<label for="autor">Autor do Curso:
+					<!--<label for="autor">Autor do Curso:
 						<select name="autor" id="autor" onchange="document.getElementById('autores').classList.toggle('oculto', this.value !== 'escrever')">
 						<option value="eu" selected>Eu sou o autor</option>
 						<option value="escrever">Escrever outro(s)</option>
@@ -76,7 +78,7 @@
 					</label>
 
 					<input class="autores oculto" name="autores" id="autores" placeholder="Separe os autores por vírgula">
-					</div>
+					</div>-->
 
 					<!-- Botão de Envio -->
 					<div class="form-actions">

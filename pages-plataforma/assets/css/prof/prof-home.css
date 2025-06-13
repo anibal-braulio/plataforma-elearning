@@ -1,6 +1,8 @@
+@import '../global-plataform.css';
 @import 'cadastro-curso.css';
 @import 'aside.css';
 header{
+	background-color: red;
 	position: sticky;
 	top: 0px;
 }
