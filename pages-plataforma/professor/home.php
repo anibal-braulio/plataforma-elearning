@@ -122,10 +122,9 @@
 				<section class="flex-column content-2">
 					<div class="box-header flex-row center just-b">
 						<h2>Seus Cursos</h2>
-						<button>ver todos</button>
 					</div>
 					
-					<div class="box-artigo flex-row center">
+					<div class="box-curso flex-row center">
 						<?php
 							$sqlc = "SELECT * FROM cursos where autor='$id'";
 							$rsc = mysqli_query($conexao, $sqlc);
@@ -137,7 +136,7 @@
 									echo "<h3>".$curso['titulo']."</h3>";
 									echo "<p>".$curso['descricao']."</p>";
 									echo "<ul class='art-box flex-row center just-b'>";
-									echo "<li>10.000kz</li>";
+									echo "<li>".$curso['preco']."kz</li>";
 									echo "<li>".$curso['classificacao']." estrelas</li></ul>";
 									echo "<ul class='flex-row just-b'>";
 									echo "<li><a id='btnComprar' href=''>comprar</a></li>";

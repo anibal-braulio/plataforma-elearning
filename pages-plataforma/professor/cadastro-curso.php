@@ -40,8 +40,8 @@
 					<label for="estado">Estado:
 						<select id="estado" name="estado" >
 						<option value="selecione" disabled selected>Selecione</option>
-						<option value="terminado">Terminado</option>
-						<option value="em curso">Em curso</option>
+						<option value="completo">Completo</option>
+						<option value="em andamenti">Em andamento</option>
 						</select>
 					</label>
 
