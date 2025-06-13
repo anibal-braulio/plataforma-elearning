@@ -1,5 +1,6 @@
-	const modal = document.querySelector(".dialog-err");
-	var campoErro = document.querySelector("dialog #erro");
+	var ctn_login = document.querySelector(".ctn-login");
+	var modalErr = document.querySelector('.modal-err');
+	const campoErro = document.querySelector('.modal-err #erro');
 
 	const regexText = /^[A-Za-zÀ-ÿ\s]{3,}$/;
 	const regexTextS = /^[A-Za-z0-9\s]+$/;
@@ -9,40 +10,36 @@
 	const regexEmail = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
 	const regexSenha = /^[^\s]+$/;
 
-	document.querySelector("dialog button").addEventListener("click",function(){
-		modal.close();
-	})
-	
 	mkForm.addEventListener("submit",function(e){
 		e.preventDefault();
 		if(titulo.value === ""){
-			campoErro.innerText = "insira um titulo mais explicativo para o curso valido";
-			modal.showModal();
+			campoErro.textContent = "insira um titulo mais explicativo para o curso valido";
+			modalErr.style.display = "block";
 			titulo.classList.add("erro-campo");
 			return;
 		}
 		if(estado.value == "selecione"){
-			campoErro.innerText = "insira o estado do seu curso!";
-			modal.showModal();
+			campoErro.textContent = "insira o estado do seu curso!";
+			modalErr.style.display = "block";
 			estado.classList.add("erro-campo");
 			return;
 		}
 		if(nivel.value == "selecione"){
-			campoErro.innerText = "insira o nivel de acesso do seu curso!";
-			modal.showModal();
+			campoErro.textContent = "insira o nivel de acesso do seu curso!";
+			modalErr.style.display = "block";
 			nivel.classList.add("erro-campo");
 			return;
 		}
 
 		if(descricao.value <= 3 || regexNormal.test(descricao.value)){
-			campoErro.innerText = "insira uma descrição boa para o seu curso!";
-			modal.showModal();
+			campoErro.textContent = "insira uma descrição boa para o seu curso!";
+			modalErr.style.display = "block";
 			descricao.classList.add("erro-campo");
 			return;
 		}
 		if(autor.value === "selecione"){
-			campoErro.innerText = "informe o autor(es) do curso!";
-			modal.showModal();
+			campoErro.textContent = "informe o autor(es) do curso!";
+			modalErr.style.display = "block";
 			document.querySelector("label[for='autor']").classList.add("erro-campo");
 			return;
 		}

@@ -2,8 +2,8 @@
 	$descricao_pagina = "tela inicial de boas vindas ao professor da plataforma elearning";
 	$titulo = "Cursos Inscritos | Professor";
 	$url_css = "../assets/css/prof/cursos.css";
-	$url_js1 = "../assets/js/cadastro.js";
 	$url_js2 = "../assets/js/jquery.js";
+	$url_js1 = "../assets/js/curso.js";
 	require_once "../templates/head.php";
 ?>
 <section class="body flex-row">
@@ -18,7 +18,7 @@
 					<!-- Título do Curso e Upload de Vídeos -->
 					<div class="flex-row center just-b" style="width:600px">
 					<label for="titulo">Título do Curso:
-						<input type="text" id="titulo" name="titulo" maxlength="80" required placeholder="Digite o título do curso">
+						<input type="text" id="titulo" name="titulo" maxlength="80"  placeholder="Digite o título do curso">
 					</label>
 
 					<label for="videos" class="upload-videos">
@@ -31,14 +31,14 @@
 					<!-- Upload de Banner -->
 					<div class="banner flex-row center just-b">
 					<label for="banner">Banner do Curso
-						<input type="file" id="banner" name="banner" accept="image/*" required>
+						<input type="file" id="banner" name="banner" accept="image/*" >
 					</label>
 					</div>
 
 					<!-- Estado, Acesso e Tipo -->
 					<div class="flex-column center just-b">
 					<label for="estado">Estado:
-						<select id="estado" name="estado" required>
+						<select id="estado" name="estado" >
 						<option value="" disabled selected>Selecione</option>
 						<option value="terminado">Terminado</option>
 						<option value="em curso">Em curso</option>
@@ -46,7 +46,7 @@
 					</label>
 
 					<label for="acesso">Acesso:
-						<select id="acesso" name="acesso" required>
+						<select id="acesso" name="acesso" >
 						<option value="publico" selected>Público</option>
 						<option value="privado">Privado</option>
 						<option value="restrito">Restrito</option>
@@ -66,7 +66,7 @@
 					<!-- Descrição e Autoria -->
 					<div class="flex-column">
 					<label for="desc">Descrição do Curso:</label>
-					<textarea name="desc" id="desc" placeholder="Dê uma boa descrição do seu curso para atrair alunos" rows="4" required></textarea>
+					<textarea name="desc" id="desc" placeholder="Dê uma boa descrição do seu curso para atrair alunos" rows="4" ></textarea>
 
 					<label for="autor">Autor do Curso:
 						<select name="autor" id="autor" onchange="document.getElementById('autores').classList.toggle('oculto', this.value !== 'escrever')">
@@ -101,13 +101,15 @@
 				<p>0</p>
 			</article>
 		</section>
-		<dialog class="dialog-err">
-			<h3>Erro no formulario</h3>
-			<p>O formulario não pode ser enviado porque há erro no seu preenchimento, leia com atenção os textos em cada campo para preencher devidamente e fazer o seu cadastro sem complicações</p>
-			<p id="erro">aguardando um texto informativo...</p>
-			<button>OK</button>
-		</dialog>
+		
 	</section>
 </section>
+	<div id="modal-err" class="modal-err">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Erro no formulario</h2>
+            <p id="erro">aguardando um texto informativo...</p>
+        </div>
+    </div>
 </body>
 </html>

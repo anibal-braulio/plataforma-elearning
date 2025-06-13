@@ -2,7 +2,8 @@
     $descricao_pagina = "tela de detalhes do curso";
 	$titulo = "Cursos Criados por mim | Professor";
 	$url_css = "../assets/css/prof/prof-home.css";
-	$url_js1 = "../assets/js/cadastro-curso.js";
+	$url_js1 = "../assets/js/jquery.js";
+	$url_js2 = "../assets/js/playlist.js";
 	require_once "../templates/head.php";
     $idCurso = $_GET['id'];
     // Verifica se o ID do curso foi fornecido
@@ -47,6 +48,9 @@
     // $conexao 
 ?>
 <section class="body flex-row">
+	<div id="box-spin">
+		<div id="spin"></div>
+	</div>
 	<section class="aside">
 		<div class="box-user flex-column center">
 			<figure>
