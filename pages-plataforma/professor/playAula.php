@@ -7,7 +7,6 @@
 	require_once "../templates/head.php";
     $idCurso = $_GET['idcurso'];
     $idAula = $_GET['idaula'];
-	var_dump($_GET);
     // Verifica se o ID do curso foi fornecido
     if (!isset($idCurso) || empty($idCurso)) {
         if(!isset($idAula) || empty($idCurso)){
@@ -183,7 +182,6 @@
 				<div class="video-box">
 				<h2 class="curso-nome"><?= $curso['titulo'] ?></h2>
 				<h3 class="titulo-video"><?= $aula['nome'] ?></h3>
-				<p class="descricao"><?= $aula['descricao'] ?></p>
 
 				<div class="video-wrapper">
 					<video id="videoPlayer" src="../../<?= $aula['url_aula']?>" controls controlsList="nodownload noplaybackrate"></video>
@@ -195,7 +193,7 @@
 					<a href="<?= $aula['url_aula']?>" download class="btn-download">⬇️ Baixar</a>
 					<button id="pipBtn">🖼️ PiP</button>
 				</div>
-
+				<p class="descricao"><strong>Descrição do Video: </strong><?= $aula['descricao'] ?></p>
 				<div class="comentarios">
 					<h4>Comentários</h4>
 					<?php foreach ($comentarios as $c): ?>
@@ -213,8 +211,6 @@
 				</div>
 				</div>
 				<br>
-				<div class="conte"> <strong class="str">Descrição:</strong> 
-				<?php echo $aula['descricao']?></div>
 				<h3>Lista das Aulas</h3>
 				<?php
 				$curso = mysqli_fetch_assoc($rs);
