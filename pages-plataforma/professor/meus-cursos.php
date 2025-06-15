@@ -48,8 +48,9 @@
 									echo "<li>".$curso['classificacao']." estrelas</li></ul>";
 									echo "<ul class='flex-row just-b'>";
 									echo "<li><a id='btnComprar' href=''>comprar</a></li>";
-									echo "<li><a id='btnDetalhes' href=''>detalhes</a></li>";
+									echo "<li><a id='btnDetalhes' href='playlistCurso.php?id=".$curso['idcurso']."'>assistir</a></li>";
 									echo "</ul></div></article>";
+									
 								}
 							}else{
 								echo "<h4>Você ainda não tem nenhum curso criado!</h4>";
