@@ -121,12 +121,12 @@
 			<section class="content flex-column center">
 				<section class="flex-column content-2">
 					<div class="box-header flex-row center just-b">
-						<h2>Seus Cursos</h2>
+						<h2>Cursos Disponiveis</h2>
 					</div>
 					
 					<div class="box-curso flex-row center">
 						<?php
-							$sqlc = "SELECT * FROM cursos where autor='$id'";
+							$sqlc = "SELECT * FROM cursos";
 							$rsc = mysqli_query($conexao, $sqlc);
 							if(mysqli_num_rows($rsc) > 0){
 								while($curso = mysqli_fetch_assoc($rsc)){
@@ -141,7 +141,7 @@
 									echo "<ul class='flex-row just-b'>";
 									echo "<li><a id='btnComprar' href=''>comprar</a></li>";
 									
-									echo "<li><a id='btnDetalhes' href='playlistCurso.php?id=".$curso['idcurso']."'>detalhes</a></li>";
+									echo "<li><a id='btnDetalhes' href='playlistCurso.php?id=".$curso['idcurso']."'>assistir</a></li>";
 									echo "</ul></div></article>";
 								}
 							}else{

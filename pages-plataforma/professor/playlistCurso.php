@@ -167,7 +167,7 @@
                 <section id="container1">
 
                     <div class="img_capa">
-                        <?php echo "<img src='".$curso['url_banner']."'>"; ?>
+                        <?php echo "<img src='../../".$curso['url_banner']."'>"; ?>
                     </div>
                     <br>
                     <div class="flex-row center just-b">
@@ -178,7 +178,7 @@
 							<li><img src="assets/partilhar" alt="share"></li>
 						</ul>
                     </div> 
-                    <div class="conte"> <strong class="str">Historia:</strong> 
+                    <div class="conte"> <strong class="str">Descrição:</strong> 
 					<?php echo $curso['descricao']?>
                    </div>
                     <h3>Lista das Aulas</h3>

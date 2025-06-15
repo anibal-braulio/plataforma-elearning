@@ -181,12 +181,12 @@
                     <div class="flex-row center just-b">
 						<h4><?php echo $aula['nome']?></h4>
 						<ul class="box-interacao flex-row center">
-							<li><img src="assets/like" alt="like"></li>
-							<li><img src="assets/comment" alt="comentario"></li>
-							<li><img src="assets/partilhar" alt="share"></li>
+							<li><img src="../assets/img/icons/like.png" alt="like"></li>
+							<li><img src="../assets/img/icons/comment.png" alt="comentario"></li>
+							<li><img src="../assets/img/icons/partilhar.png" alt="share"></li>
 						</ul>
                     </div> 
-                    <div class="conte"> <strong class="str">Historia:</strong> 
+                    <div class="conte"> <strong class="str">Descrição:</strong> 
                     <?php echo $aula['descricao']?></div>
                     <h3>Lista das Aulas</h3>
                     <?php
