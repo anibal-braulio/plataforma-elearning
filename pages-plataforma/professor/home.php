@@ -2,13 +2,13 @@
 	$descricao_pagina = "tela inicial de boas vindas ao professor da plataforma elearning";
 	$titulo = "Tela Inicial | Professor";
 	$url_css = "../assets/css/prof/prof-home.css";
-	$url_js1 = "../assets/js/cadastro.js";
-	$url_js1 = "../assets/js/cadastro.js";
+	$url_js1 = "../assets/js/home.js";
+	$url_js1 = "../assets/js/home.js";
 	require_once "../templates/head.php";
 ?>
 <section class="body flex-row">
 	<section class="aside">
-		<div class="box-user flex-column center">
+		<div class="box-user">
 			<figure>
 				<?php echo "<img loading='lazy' src='../../".$dados['foto_perfil']."'>"?>
 			</figure>
@@ -118,42 +118,16 @@
 					<p>0</p>
 				</article>
 			</section>-->
-			<section class="content flex-column center">
-				<section class="flex-column content-2">
-					<div class="box-header flex-row center just-b">
-						<h2>Cursos Disponiveis</h2>
-					</div>
-					
-					<div class="box-curso flex-row center">
-						<?php
-							$sqlc = "SELECT * FROM cursos";
-							$rsc = mysqli_query($conexao, $sqlc);
-							if(mysqli_num_rows($rsc) > 0){
-								while($curso = mysqli_fetch_assoc($rsc)){
-									echo "<article class='curso flex-column center'>";
-									echo "<figure>";
-									echo "<img src='../../".$curso['url_banner']."'></figure><div>";
-									echo "<h3>".$curso['titulo']."</h3>";
-									echo "<p>".$curso['descricao']."</p>";
-									echo "<ul class='art-box flex-row center just-b'>";
-									echo "<li>".$curso['preco']."kz</li>";
-									echo "<li>".$curso['classificacao']." estrelas</li></ul>";
-									echo "<ul class='flex-row just-b'>";
-									echo "<li><a id='btnComprar' href=''>comprar</a></li>";
-									
-									echo "<li><a id='btnDetalhes' href='playlistCurso.php?id=".$curso['idcurso']."'>assistir</a></li>";
-									echo "</ul></div></article>";
-								}
-							}else{
-								echo "<h4>Você ainda não tem nenhum curso criado!</h4>";
-								echo "<p><a href='meus-cursos.php?painel=mk-curso'>clique aqui<a> para criar um curso!";
-							}
-						?>
-					</div>
-				</section>
-			</section>
-		</section>
-		<section class="flex-column center">
+			<div class="video-container">
+				<video id="videoApresentacao" autoplay muted loop>
+				<source src="../assets/midia/lms.mp4" type="video/mp4">
+				Seu navegador não suporta vídeos HTML5.
+				</video>
+				<p>Seja bem vindo a plataforma Tocolearn</p>
+				<p id="nameWell">Ola, <?php echo $dados['nome']?></p>
+				<button id="toggleAudio">🔇 Som</button>
+			</div>
+		<!--<section class="flex-column center">
 			<article class="ctn-universi flex-column center">
 				<h3>A Universidade Tocoista</h3>
 				<figure>
@@ -164,7 +138,7 @@
 					<li>A igreja Tocoista, <a href="">visite o site</a></li>
 					<li>A historia por tras de tudo isso, <a href="">visite o site</a></li>
 				</ul>
-			</article>
+			</article>-->
 			<!--<footer class="ctn-conversas flex-row center just-b">
 				<section class="ctt-footer ctt-conversas flex-column center">
 					<div class="box-1 box-sms flex-row center just-b">
@@ -263,6 +237,41 @@
 					</div>
 				</section>
 			</footer>-->
+		</section>
+		<section class="content flex-column center">
+				<section class="flex-column content-2">
+					<div class="box-header flex-row center just-b">
+						<h2>Cursos Disponiveis</h2>
+					</div>
+					
+					<div class="box-curso flex-row center">
+						<?php
+							$sqlc = "SELECT * FROM cursos";
+							$rsc = mysqli_query($conexao, $sqlc);
+							if(mysqli_num_rows($rsc) > 0){
+								while($curso = mysqli_fetch_assoc($rsc)){
+									echo "<article class='curso flex-column center'>";
+									echo "<figure>";
+									echo "<img src='../../".$curso['url_banner']."'></figure><div>";
+									echo "<h3>".$curso['titulo']."</h3>";
+									echo "<p>".$curso['descricao']."</p>";
+									echo "<ul class='art-box flex-row center just-b'>";
+									echo "<li>".$curso['preco']."kz</li>";
+									echo "<li>".$curso['classificacao']." estrelas</li></ul>";
+									echo "<ul class='flex-row just-b'>";
+									echo "<li><a id='btnComprar' href=''>comprar</a></li>";
+									
+									echo "<li><a id='btnDetalhes' href='playlistCurso.php?id=".$curso['idcurso']."'>assistir</a></li>";
+									echo "</ul></div></article>";
+								}
+							}else{
+								echo "<h4>Você ainda não tem nenhum curso criado!</h4>";
+								echo "<p><a href='meus-cursos.php?painel=mk-curso'>clique aqui<a> para criar um curso!";
+							}
+						?>
+					</div>
+				</section>
+			</section>
 		</section>
 	</section>
 </section>
