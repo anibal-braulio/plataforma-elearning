@@ -1,11 +1,178 @@
 @import "playlist.css";
-.video_capa{
-    background-color: black;
-    width: 100%;
-    height: 500px;
+.container{
+    background-color: #333;
 }
-.video_capa video{
-    margin-left: 10px;
-    width: 95%;
-    height: 90%;
+.video-box {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  width: 800px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  color: #333;
 }
+
+.curso-nome {
+  color: #4caf50;
+  margin-bottom: 5px;
+}
+
+.titulo-video {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.descricao {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+video {
+  width: 100%;
+  border-radius: 12px;
+  outline: none;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.botoes button,
+.botoes a {
+  background: #4caf50;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.botoes button:hover,
+.botoes a:hover {
+  background: #388e3c;
+}
+
+.comentarios {
+  margin-top: 20px;
+}
+
+.comentario {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-comentario textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  resize: vertical;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-comentario button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-comentario button:hover {
+  background: #388e3c;
+}
+/*
+.video-container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 700px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+  transform: scale(1.01);
+}
+
+video {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.video-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background: #fafafa;
+}
+
+.action-btn {
+  font-size: 20px;
+  background: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.action-btn:hover {
+  background-color: #e0f2fe;
+  transform: scale(1.1);
+}
+
+.comment-box {
+  display: none;
+  flex-direction: column;
+  padding: 15px;
+  border-top: 1px solid #eee;
+  animation: fadeIn 0.3s ease;
+}
+
+.comment-box textarea {
+  resize: none;
+  height: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.submit-comment {
+  align-self: flex-end;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-comment:hover {
+  background: #2563eb;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}*/

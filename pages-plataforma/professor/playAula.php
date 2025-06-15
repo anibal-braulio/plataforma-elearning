@@ -170,43 +170,70 @@
 				</article>
 			</section>
 			<main>
-                <?php echo "<h1>".$curso['titulo']."</h1>" ?>
-
                 <section id="container">
+				<?php
+					$likes = 128;
 
-                    <div class="video_capa flex-row center">
-                       <?php echo "<video src='../../".$aula['url_aula']."' controls autoplay></video>"?>
-                    </div>
-                    <br>
-                    <div class="flex-row center just-b">
-						<h4><?php echo $aula['nome']?></h4>
-						<ul class="box-interacao flex-row center">
-							<li><img src="../assets/img/icons/like.png" alt="like"></li>
-							<li><img src="../assets/img/icons/comment.png" alt="comentario"></li>
-							<li><img src="../assets/img/icons/partilhar.png" alt="share"></li>
-						</ul>
-                    </div> 
-                    <div class="conte"> <strong class="str">Descrição:</strong> 
-                    <?php echo $aula['descricao']?></div>
-                    <h3>Lista das Aulas</h3>
-                    <?php
-                    $curso = mysqli_fetch_assoc($rs);
-                    $sql = "SELECT * FROM aulas WHERE curso = '$idCurso'";
-                    $rs = mysqli_query($conexao, $sql);
-                    if(mysqli_num_rows($rs) > 0){
-                       echo "<ul class='menu-reproducao'>";
-                        While($aulas = mysqli_fetch_assoc($rs)){
-                            echo "<li class='link'><a href='playAula.php?idcurso=".$idCurso."&idaula=".$aulas['idaula']."'>".$aulas['nome']."</a></li>";
-                        }  
-						echo "</ul>"; 
-                    }else{
-                        header("Location: home.php?error=3");
-                        return;
-                        $_SESSION['erro'] = "Curso não tem aulas cadastradas!";
-                    }
+	// Simulando comentários do banco
+					$comentarios = [
+					["usuario" => "Ana", "mensagem" => "A aula foi muito clara, obrigada!"],
+					["usuario" => "Carlos", "mensagem" => "Gostei da parte sobre media queries!"],
+					];
+				?>
+				<div class="video-box">
+				<h2 class="curso-nome"><?= $curso['titulo'] ?></h2>
+				<h3 class="titulo-video"><?= $aula['nome'] ?></h3>
+				<p class="descricao"><?= $aula['descricao'] ?></p>
 
-                    ?>
-                </main>
+				<div class="video-wrapper">
+					<video id="videoPlayer" src="../../<?= $aula['url_aula']?>" controls controlsList="nodownload noplaybackrate"></video>
+				</div>
+
+				<div class="botoes">
+					<button id="likeBtn">👍 <span id="likeCount"><?= $likes ?></span></button>
+					<button id="saveBtn">💾 Guardar para depois</button>
+					<a href="<?= $aula['url_aula']?>" download class="btn-download">⬇️ Baixar</a>
+					<button id="pipBtn">🖼️ PiP</button>
+				</div>
+
+				<div class="comentarios">
+					<h4>Comentários</h4>
+					<?php foreach ($comentarios as $c): ?>
+					<div class="comentario">
+						<strong><?= $c['usuario'] ?>:</strong>
+						<p><?= $c['mensagem'] ?></p>
+					</div>
+					<?php endforeach; ?>
+
+					<form action="enviar_comentario.php" method="POST" class="form-comentario">
+					<textarea name="mensagem" required placeholder="Escreva um comentário..."></textarea>
+					<input type="hidden" name="curso" value="<?= $curso ?>">
+					<button type="submit">Enviar</button>
+					</form>
+				</div>
+				</div>
+				<br>
+				<div class="conte"> <strong class="str">Descrição:</strong> 
+				<?php echo $aula['descricao']?></div>
+				<h3>Lista das Aulas</h3>
+				<?php
+				$curso = mysqli_fetch_assoc($rs);
+				$sql = "SELECT * FROM aulas WHERE curso = '$idCurso'";
+				$rs = mysqli_query($conexao, $sql);
+				if(mysqli_num_rows($rs) > 0){
+					echo "<ul class='menu-reproducao'>";
+					While($aulas = mysqli_fetch_assoc($rs)){
+						echo "<li class='link'><a href='playAula.php?idcurso=".$idCurso."&idaula=".$aulas['idaula']."'>".$aulas['nome']."</a></li>";
+					}  
+					echo "</ul>"; 
+				}else{
+					header("Location: home.php?error=3");
+					return;
+					$_SESSION['erro'] = "Curso não tem aulas cadastradas!";
+				}
+
+				?>
+			</main>
             </section>
         <section>
     </section>
