@@ -1,11 +1,15 @@
 <?php 
 	$descricao_pagina = "tela inicial de boas vindas ao professor da plataforma elearning";
 	$titulo = "Cursos Inscritos | Professor";
-	$url_css = "../assets/css/prof/inscritos.css";
-	$url_js2 = "../assets/js/jquery.js";
-	$url_js1 = "../assets/js/curs.js";
+	$url_css = "../assets/css/prof/cursos.css";
+	$url_js1 = "../assets/js/jquery.js";
+	$url_js2 = "../assets/js/curso.js";
 	require_once "../templates/head.php";
 ?>
+
+<div id="box-spin">
+	<div id="spin"></div>
+</div>
 <section class="body flex-row">
 	<?php require_once "../templates/asideCurso.php"?>
 	<section class="conteudo">

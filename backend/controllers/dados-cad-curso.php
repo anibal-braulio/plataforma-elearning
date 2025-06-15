@@ -2,7 +2,6 @@
 require_once 'dbconexao.php';
 session_start();
 
-if (isset($_POST['salvar'])) {
     if (!empty($_FILES['videos']['tmp_name'][0]) && !empty($_FILES['banner']['name'])) {
         $extImg = pathinfo($_FILES['banner']['name'], PATHINFO_EXTENSION);
         $permitidoImg = array("jpg", "jpeg", "png");
@@ -29,7 +28,7 @@ if (isset($_POST['salvar'])) {
 
             // Criação da pasta com nome do curso sanitizado
             $pastaCurso = preg_replace('/[^a-zA-Z0-9-_]/', '_', strtolower($tituloOriginal));
-            $caminhoPasta = "../uploads/videos/" . $pastaCurso;
+            $caminhoPasta = "../uploads/cursos/" . $pastaCurso;
 
             if (!is_dir($caminhoPasta)) {
                 mkdir($caminhoPasta, 0777, true);
@@ -48,8 +47,8 @@ if (isset($_POST['salvar'])) {
                         $nomeOriginal = pathinfo($_FILES['videos']['name'][$i], PATHINFO_FILENAME);
 
                         if (in_array(strtolower($extVid), $permitidoVid)) {
-                            $caminhoFinal = $caminhoPasta . '/' . $nomeOriginal;
-                            $urlFinal = "backend/uploads/cursos/".$pastaCurso."/".$nomeOriginal; // Caminho salvo no banco
+                            $caminhoFinal = $caminhoPasta . '/' . $_FILES['videos']['name'][$i];
+                            $urlFinal = "backend/uploads/cursos/".$pastaCurso."/".$_FILES['videos']['name'][$i]; // Caminho salvo no banco
 
                             if (move_uploaded_file($tmpName, $caminhoFinal)) {
                                 $rs = mysqli_query($conexao,
@@ -79,8 +78,5 @@ if (isset($_POST['salvar'])) {
         header('Location: ../../pages-plataforma/prof/cadastro-curso?erro=cadastrar_curso');
         exit;
     }
-} else {
-    header('Location: ../../pages-plataforma/prof/cadastro-curso');
-    exit;
-}
+
 ?>

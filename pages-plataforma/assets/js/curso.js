@@ -62,25 +62,18 @@
 			estado.classList.add("erro-campo");
 			return;
 		}
-		if(nivel.value == "selecione"){
+		if(acesso.value == "selecione"){
 			campoErro.textContent = "insira o nivel de acesso do seu curso!";
 			modalErr.style.display = "block";
-			nivel.classList.add("erro-campo");
+			acesso.classList.add("erro-campo");
 			return;
 		}
 
-		if(descricao.value <= 3 || regexNormal.test(descricao.value)){
+		if(desc.value <= 3 || regexNormal.test(desc.value)){
 			campoErro.textContent = "insira uma descrição boa para o seu curso!";
 			modalErr.style.display = "block";
-			descricao.classList.add("erro-campo");
-			return;
-		}
-		if(autor.value === "selecione"){
-			campoErro.textContent = "informe o autor(es) do curso!";
-			modalErr.style.display = "block";
-			document.querySelector("label[for='autor']").classList.add("erro-campo");
+			desc.classList.add("erro-campo");
 			return;
 		}
 		mkForm.submit();
-		
 	});

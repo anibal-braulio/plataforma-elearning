@@ -1,7 +1,7 @@
 <?php
     $descricao_pagina = "tela de detalhes do curso";
-	$titulo = "Cursos Criados por mim | Professor";
-	$url_css = "../assets/css/prof/prof-home.css";
+	$titulo = "PlayList dos Cursos | Professor";
+	$url_css = "../assets/css/prof/playlist.css";
 	$url_js1 = "../assets/js/jquery.js";
 	$url_js2 = "../assets/js/playlist.js";
 	require_once "../templates/head.php";
@@ -11,14 +11,13 @@
         header("Location: home.php?error=1");
         exit;
     }
-    $sql = "SELECT * FROM cursos WHERE idcurso = '$idCurso'";
-    $rs = mysqli_query($conexao, $sql);
+    $rsc = mysqli_query($conexao, "SELECT * FROM cursos WHERE idcurso = '$idCurso'");
     // Verifica se a consulta retornou resultados
     // mysqli_stmt_bind_param($rs, $idCurso);
     // mysqli_stmt_execute($rs);
     // $resultado = mysqli_stmt_get_result($rs);
-    $curso = mysqli_fetch_assoc($rs);
-    if(mysqli_num_rows($rs) <= 0){
+    $curso = mysqli_fetch_assoc($rsc);
+    if(mysqli_num_rows($rsc) <= 0){
         header("Location: home.php?error=2");
         $_SESSION['erro'] = "Video não está disponovel na plataforma no momento!";
     }
@@ -171,21 +170,28 @@
                         <?php echo "<img src='".$curso['url_banner']."'>"; ?>
                     </div>
                     <br>
-                    <h4><?php echo $curso['titulo']?></h4>
+                    <div class="flex-row center just-b">
+						<h4><?php echo $curso['titulo']?></h4>
+						<ul class="box-interacao flex-row center">
+							<li><img src="assets/like" alt="like"></li>
+							<li><img src="assets/comment" alt="comentario"></li>
+							<li><img src="assets/partilhar" alt="share"></li>
+						</ul>
                     </div> 
                     <div class="conte"> <strong class="str">Historia:</strong> 
-                    Nesse anime acompanhamos a história de um garodo que mora no interior e decide sair de seu 
-    habitar natural junto com seus dois amigos para conseguir dinheiro e ajudar o seu vilarejo , no entanto acabam descobrindo que a cidade
-não é um mar de estrelas</div>
+					<?php echo $curso['descricao']?>
+                   </div>
                     <h3>Lista das Aulas</h3>
                     <?php
-                    $curso = mysqli_fetch_assoc($rs);
+                    $curso = mysqli_fetch_assoc($rsc);
                     $sql = "SELECT * FROM aulas WHERE curso = '$idCurso'";
                     $rs = mysqli_query($conexao, $sql);
                     if(mysqli_num_rows($rs) > 0){
+						echo "</ul>";
                         While($aulas = mysqli_fetch_assoc($rs)){
-                            echo "<ul><li class='link'><a>".$aulas['nome']."</a></li></ul>";
+                            echo "<li class='link'><a href='playAula.php?idcurso=".$idCurso."&idaula=".$aulas['idaula']."'>".$aulas['nome']."</a></li>";
                         }  
+						echo "</ul>";
                     }else{
                         header("Location: home.php?error=3");
                         return;
