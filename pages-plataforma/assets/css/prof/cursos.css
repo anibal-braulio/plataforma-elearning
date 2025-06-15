@@ -1,5 +1,9 @@
 @import "header.css";
 @import "prof-home.css";
+.menu-hd{
+  margin: 0px 5px;
+  width: 120px;
+}
 .btnCadastrar{
     position: fixed;
     bottom: 10px;

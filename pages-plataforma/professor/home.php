@@ -29,7 +29,7 @@
 						<figcaption>dashboard</figcaption>
 					</figure>
 				</a></li>
-				<li><a href="meus-cursos.php">
+				<li><a href="cursos-disponiveis.php">
 					<figure>
 						<img src="../assets/img/icons/play@1.png" alt="icone de para acessar perfil">
 						<figcaption>cursos</figcaption>
@@ -238,7 +238,7 @@
 				</section>
 			</footer>-->
 		</section>
-		<section class="content flex-column center">
+		<section class="content content-home flex-column center">
 				<section class="flex-column content-2">
 					<div class="box-header flex-row center just-b">
 						<h2>Cursos Disponiveis</h2>

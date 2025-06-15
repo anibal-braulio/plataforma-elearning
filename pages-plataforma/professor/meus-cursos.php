@@ -6,17 +6,33 @@
 	require_once "../templates/head.php";
 ?>
 <section class="body flex-row">
-	<?php require_once "../templates/asideCurso.php"?>
+	<section class="aside flex-column center">
+		<div class="box-user flex-column center">
+			<figure>
+				<?php echo "<img loading='lazy' src='../../".$dados['foto_perfil']."'>"?>
+			</figure>
+			<figcaption>Olá, <?php echo $dados['nome']?></figcaption>
+			<?php echo "<p>".$dados['email']."</p>" ?>
+		</div>
+		<nav>
+            <ul class="menu-hd flex-column center">
+				<li><a href="cursos-disponiveis.php">Disponiveis</a></li>
+				<li class="item-ativo"><a href="meus-cursos.php">Meus</a></li>
+				<li><a href="inscritos.php">Inscritos</a></li>
+				<li><a href="assitidos.php">Assitidos</a></li>
+				<li><a href="guardados.php">Guardados</a></li>
+			</ul>
+		</nav>
+	</section>
 	<section class="conteudo">
 		<?php require_once "../templates/header.php"?>
 					<section class="content flex-column center">
 				<section class="flex-column content-2">
 					<div class="box-header flex-row center just-b">
 						<h2>Seus Cursos</h2>
-						<button>ver todos</button>
 					</div>
 					
-					<div class="box-artigo flex-row center">
+					<div class="box-curso flex-row center">
 						<?php
 							$sqlc = "SELECT * FROM cursos where autor='$id'";
 							$rsc = mysqli_query($conexao, $sqlc);
@@ -37,7 +53,7 @@
 								}
 							}else{
 								echo "<h4>Você ainda não tem nenhum curso criado!</h4>";
-								echo "<p><a href='meus-cursos.php?painel=mk-curso'>clique aqui<a> para criar um curso!";
+								echo "<p><a class='a-cad' href='cadastro-curso.php'>clique aqui<a> para criar um curso!";
 							}
 						?>
 					</div>
@@ -111,9 +127,9 @@
 		</section>-->
 	</section>
 </section>
-	<button class="btnCadastrar">
+	<button class="btnCadastrar"><a href="cadastro-curso.php">
 		<img src="../assets/img/icons/add.png" alt="">
-	</button>
+	</a></button>
 </form>
 </div>
 </body>

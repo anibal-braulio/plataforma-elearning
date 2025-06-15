@@ -1,0 +1,2 @@
+não suporta mais de 3filas de curso
+o layout do aside não é maleavel

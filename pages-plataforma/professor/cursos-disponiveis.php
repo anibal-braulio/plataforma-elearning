@@ -6,16 +6,33 @@
 	require_once "../templates/head.php";
 ?>
 <section class="body flex-row">
-	<?php require_once "../templates/asideCurso.php"?>
+	<section class="aside flex-column center">
+		<div class="box-user flex-column center">
+			<figure>
+				<?php echo "<img loading='lazy' src='../../".$dados['foto_perfil']."'>"?>
+			</figure>
+			<figcaption>Olá, <?php echo $dados['nome']?></figcaption>
+			<?php echo "<p>".$dados['email']."</p>" ?>
+		</div>
+		<nav>
+            <ul class="menu-hd flex-column center">
+				<li class="item-ativo"><a href="cursos-disponiveis.php">Disponiveis</a></li>
+				<li><a href="meus-cursos.php">Meus</a></li>
+				<li><a href="inscritos.php">Inscritos</a></li>
+				<li><a href="assitidos.php">Assitidos</a></li>
+				<li><a href="guardados.php">Guardados</a></li>
+			</ul>
+		</nav>
+	</section>
 	<section class="conteudo">
 		<?php require_once "../templates/header.php"?>
-					<section class="content flex-column center">
+			<section class="content flex-column center">
 				<section class="flex-column content-2">
 					<div class="box-header flex-row center just-b">
 						<h2>Cursos Disponiveis</h2>
 					</div>
 					
-					<div class="box-artigo flex-row center">
+					<div class="box-curso flex-row center">
 						<?php
 							$sqlc = "SELECT * FROM cursos";
 							$rsc = mysqli_query($conexao, $sqlc);
@@ -62,58 +79,7 @@
 			<p id="erro">aguardando um texto informativo...</p>
 			<button>OK</button>
 		</dialog>
-		<!--<nav>
-			<ul>
-				<li>gadjet<figure><img src="menu-pop.png"></figure></li>
-				<li>
-					
-				</li>
-			</ul>
-		</nav>
-		<a href="" class="mk-btn" id="mk-btn">criar curso</a>
-		<a href="" class="mk-btn" id="mk-btn">criar curso</a>-->
-		<!--<section class="container">
-			<article>
-				<h3>Painel de criação</h3>
-				<fieldset class="painel-upload"><legend>Carregue a sua pasta de curso</legend>
-					<form id="form-upload">
-						<input type="file" name="upload" value="clique para carregar">
-						carregue uma imagem/banner para atribuir ao curso
-						<button>cancelar</button>
-					</form>
-				</fieldset>
-				
-				<fieldset><legend>Dados do Curso</legend>
-					<form id="form-cadastro">
-					<label>
-						<input type="text" name="titulo" id="titulo" placeholder="informe um titulo para o curso">
-					</label>
-					<label>
-						<input type="text" name="descricao" id="descricao" placeholder="descreva seu curso">
-						<p>é um curso de que?</p>
-						<p>e para que serve esse curso?</p>
-						<p>porque devo aprender o que está ensinando aqui?</p>
-					</label>
-
-					<label for="autoria">Autoria do Curso</label>
-					<select name="autoria" id="autoria">
-						<option value="individual">indivividual</option>
-						<option value="coletiva">colectiva</option>
-					</select>
-					<label for="autor">
-						<input type="text" name="autor" id="autor" placeholder="separe o nome de cada autor por virgula(,)">
-					</label>
-				</form>
-				</fieldset>
-				
-			</article>
-		</section>-->
 	</section>
 </section>
-	<button class="btnCadastrar">
-		<img src="../assets/img/icons/add.png" alt="">
-	</button>
-</form>
-</div>
 </body>
 </html>
