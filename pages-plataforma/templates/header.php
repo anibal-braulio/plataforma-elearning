@@ -38,7 +38,7 @@
 					<li><a href="#">
 						Dashboard
 					</a></li>
-					<li><a href="../professor/meus-cursos.php">
+					<li><a href="../professor/cursos-disponiveis.php">
 						Cursos
 					</a></li>
 					<li><a href="../professor/chat.php">
