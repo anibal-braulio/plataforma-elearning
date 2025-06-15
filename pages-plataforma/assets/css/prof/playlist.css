@@ -1,0 +1,10 @@
+@import 'prof-home.css';
+.box-interacao{
+    padding: 10px 0px;
+    background-color: red;
+    margin: auto 0px;
+}
+.box-interacao li{
+    background-color: blue  ;
+    margin-right: 10px;
+}

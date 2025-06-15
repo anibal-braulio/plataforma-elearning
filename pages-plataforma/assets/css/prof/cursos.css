@@ -185,12 +185,6 @@ label.upload-videos {
   border-radius: 10px;
   transition: background 0.3s ease;
 }
-
-label.upload-videos:hover {
+label .upload-videos:hover {
   background: #dcdde1;
-}
-
-/* Responsive */
-@media screen {
-    
 }
