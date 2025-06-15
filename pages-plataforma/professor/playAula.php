@@ -194,9 +194,11 @@
                     $sql = "SELECT * FROM aulas WHERE curso = '$idCurso'";
                     $rs = mysqli_query($conexao, $sql);
                     if(mysqli_num_rows($rs) > 0){
+                       echo "<ul class='menu-reproducao'>";
                         While($aulas = mysqli_fetch_assoc($rs)){
-                            echo "<ul><li class='link'><a>".$aulas['nome']."</a></li></ul>";
+                            echo "<li class='link'><a href='playAula.php?idcurso=".$idCurso."&idaula=".$aulas['idaula']."'>".$aulas['nome']."</a></li>";
                         }  
+						echo "</ul>"; 
                     }else{
                         header("Location: home.php?error=3");
                         return;

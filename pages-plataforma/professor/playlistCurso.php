@@ -170,14 +170,14 @@
                         <?php echo "<img src='../../".$curso['url_banner']."'>"; ?>
                     </div>
                     <br>
-                    <div class="flex-row center just-b">
+                    <!--<div class="flex-row center just-b">
 						<h4><?php echo $curso['titulo']?></h4>
 						<ul class="box-interacao flex-row center">
 							<li><img src="assets/like" alt="like"></li>
 							<li><img src="assets/comment" alt="comentario"></li>
 							<li><img src="assets/partilhar" alt="share"></li>
 						</ul>
-                    </div> 
+                    </div> -->
                     <div class="conte"> <strong class="str">Descrição:</strong> 
 					<?php echo $curso['descricao']?>
                    </div>
@@ -187,7 +187,7 @@
                     $sql = "SELECT * FROM aulas WHERE curso = '$idCurso'";
                     $rs = mysqli_query($conexao, $sql);
                     if(mysqli_num_rows($rs) > 0){
-						echo "</ul>";
+						echo "<ul class='menu-reproducao'>";
                         While($aulas = mysqli_fetch_assoc($rs)){
                             echo "<li class='link'><a href='playAula.php?idcurso=".$idCurso."&idaula=".$aulas['idaula']."'>".$aulas['nome']."</a></li>";
                         }  
