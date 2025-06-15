@@ -1,5 +1,9 @@
 @import "header.css";
 @import "prof-home.css";
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 .menu-hd{
   margin: 0px 5px;
   width: 120px;
@@ -65,15 +69,26 @@
     font-weight: bold;
     cursor: pointer;
 }
-
+.form{
+  width: 100%;
+  margin: 10px;
+}
 .form-criacao {
-  background: #fff;
   border-radius: 12px;
   padding: 30px;
-  max-width: 800px;
+  width: 800px;
 }
 fieldset{
+  border: none;
+}
+.fieldset-main{
+    border: 1px solid white;
+    padding: 10px;
     width: 100%;
+}
+.fds-2{
+  margin: 0px auto;
+  width: 550px;
 }
 /* Título */
 form h1 {
@@ -84,7 +99,9 @@ form h1 {
 
 /* Inputs e labels */
 .banner{
-    padding: 10px ;
+    margin: 5px auto;
+    width: 150px;
+    padding: 10px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white !important;
@@ -98,9 +115,8 @@ form h1 {
 label {
   display: flex;
   flex-direction: column;
-  font-weight: 600;
+  font-weight: bold;
   color: #333;
-  margin-bottom: 20px;
 }
 
 input[type="text"],
@@ -115,6 +131,12 @@ select {
   font-size: 15px;
   transition: border-color 0.3s ease;
 }
+.lbl-desc{
+  margin-top: 10px;
+}
+textarea{
+  margin: 0px;
+}
 select{
     width: 200px;
 }
@@ -124,7 +146,7 @@ select{
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: #3498db;
+  border-color: #4caf50;
   outline: none;
 }
 
@@ -141,7 +163,7 @@ textarea {
 
 /* Botão de envio */
 button#salvar {
-  background-color: #3498db;
+  background-color: #4caf50;
   color: white;
   padding: 14px 24px;
   border: none;
@@ -154,7 +176,7 @@ button#salvar {
 }
 
 button#salvar:hover {
-  background-color: #2980b9;
+  background-color: #348837;
 }
 
 /* Flex containers */

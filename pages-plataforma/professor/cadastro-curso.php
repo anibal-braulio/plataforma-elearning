@@ -33,30 +33,45 @@
 		<?php require_once "../templates/header.php"?>
 		<section class="content-mk-curso">
 			<form id="mkForm" class="form form-criacao" action="../../backend/controllers/dados-cad-curso.php" method="post" enctype="multipart/form-data">
-				<fieldset>
+				<fieldset class="fieldset-main flex-column center just-b">
 					<legend><h1>Painel de Criação de Curso</h1></legend>
-
+					<fieldset class="flex-row center just-b">
+						<label for="titulo">Título do Curso:
+							<input type="text" id="titulo" name="titulo" maxlength="80"  placeholder="Digite o título do curso">
+						</label>
+						<div class="banner flex-row center just-b">
+							<label for="banner">Banner do Curso
+								<input type="file" id="banner" name="banner" accept="image/*" hidden>
+							</label>
+						</div>
+						<div class="videos flex-row center just-b">
+							<label for="videos" class="upload-videos">
+								<img src="../assets/img/icons/pasta.png">
+								<span>Adicionar Vídeos</span>
+								<input type="file" name="videos[]" id="videos" multiple accept="video/*" hidden>
+							</label>
+						</div>
+					</fieldset>
 					<!-- Título do Curso e Upload de Vídeos -->
-					<div class="flex-row center just-b" style="width:600px">
+					<!--<div class="flex-row center just-b" style="width:600px">
 					<label for="titulo">Título do Curso:
 						<input type="text" id="titulo" name="titulo" maxlength="80"  placeholder="Digite o título do curso">
 					</label>
-
+						<div class="banner flex-row center just-b">
+					<label for="banner">Banner do Curso
+						<input type="file" id="banner" name="banner" accept="image/*" hidden>
+					</label>
+					</div>
+					<div class="videos flex-row center just-b">
 					<label for="videos" class="upload-videos">
 						<img src="../assets/img/icons/pasta.png">
 						<span>Adicionar Vídeos</span>
 						<input type="file" name="videos[]" id="videos" multiple accept="video/*" hidden>
 					</label>
-					</div>
-
-					<!-- Upload de Banner -->
-					<div class="banner flex-row center just-b">
-					<label for="banner">Banner do Curso
-						<input type="file" id="banner" name="banner" accept="image/*" hidden>
-					</label>
-					</div>
+					</div>-->
 
 					<!-- Estado, Acesso e Tipo -->
+					<fieldset class="fds-2 flex-row center just-b">
 					<div class="flex-column center just-b">
 					<label for="estado">Estado:
 						<select id="estado" name="estado" >
@@ -88,8 +103,8 @@
 
 					<!-- Descrição e Autoria -->
 					<div class="flex-column">
-					<label for="desc">Descrição do Curso:</label>
-					<textarea name="desc" id="desc" placeholder="Dê uma boa descrição do seu curso para atrair alunos" rows="4" ></textarea>
+					<label for="desc" class="lbl-desc">Descrição do Curso:</label>
+					<textarea name="desc" id="desc" placeholder="Dê uma boa descrição do seu curso para atrair alunos" rows="6" cols="30"></textarea>
 
 					<!--<label for="autor">Autor do Curso:
 						<select name="autor" id="autor" onchange="document.getElementById('autores').classList.toggle('oculto', this.value !== 'escrever')">
@@ -105,6 +120,7 @@
 					<div class="form-actions">
 					<button type="submit" name="salvar" id="salvar">Salvar Curso</button>
 					</div>
+				</fieldset>
 				</fieldset>
 				</form>
 
