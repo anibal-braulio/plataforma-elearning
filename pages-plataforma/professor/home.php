@@ -2,8 +2,8 @@
 	$descricao_pagina = "tela inicial de boas vindas ao professor da plataforma elearning";
 	$titulo = "Tela Inicial | Professor";
 	$url_css = "../assets/css/prof/prof-home.css";
-	$url_js1 = "../assets/js/home.js";
-	$url_js1 = "../assets/js/home.js";
+	$url_js1 = "../assets/js/jquery.js";
+	$url_js2 = "../assets/js/home.js";
 	require_once "../templates/head.php";
 ?>
 <section class="body flex-row">
@@ -244,7 +244,7 @@
 						<h2>Cursos Disponiveis</h2>
 					</div>
 					
-					<div class="box-curso flex-row center">
+					<div class="box-curso box-c flex-row center">
 						<?php
 							$sqlc = "SELECT * FROM cursos";
 							$rsc = mysqli_query($conexao, $sqlc);

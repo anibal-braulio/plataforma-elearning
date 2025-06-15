@@ -10,3 +10,20 @@ botaoAudio.addEventListener('click', () => {
     botaoAudio.textContent = '🔊 Som';
   }
 });
+ function checkScrollReveal() {
+      $('.box-c article').each(function() {
+        let boxTop = $(this).offset().top;
+        let scrollBottom = $(window).scrollTop() + $(window).height();
+
+        if (boxTop < scrollBottom - 100) {
+          $(this).addClass('reveal');
+        }
+      });
+    }
+
+    $(document).ready(function() {
+      checkScrollReveal(); // verifica ao carregar
+      $(window).on('scroll', function() {
+        checkScrollReveal(); // verifica ao rolar
+      });
+    });

@@ -251,6 +251,15 @@ section h2{
 	margin-right: 15px;
 	margin-bottom: 10px;
 }
+.box-c article{
+	opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+ .box-c .reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
 .content{
 	width: 80%;
 }
