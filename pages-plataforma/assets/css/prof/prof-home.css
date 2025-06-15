@@ -106,7 +106,10 @@ header li{
 	text-align: left;
 	font-size: 16px;
 }
-
+.menu-header figure:hover{
+	opacity: 0.80;
+	transition: .3s;
+}
 .box-user figcaption, .box-user h3,.box-user p{ 
 	width: 100%;
 }

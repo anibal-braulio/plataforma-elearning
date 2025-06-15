@@ -4,6 +4,10 @@
   margin: 0px 5px;
   width: 120px;
 }
+.menu-hd li:hover{
+    opacity: 0.80;
+	  transition: .3s;
+}
 .btnCadastrar{
     position: fixed;
     bottom: 10px;

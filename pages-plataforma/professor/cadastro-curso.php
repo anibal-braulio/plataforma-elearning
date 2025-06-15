@@ -11,7 +11,24 @@
 	<div id="spin"></div>
 </div>
 <section class="body flex-row">
-	<?php require_once "../templates/asideCurso.php"?>
+	<section class="aside flex-column center">
+		<div class="box-user flex-column center">
+			<figure>
+				<?php echo "<img loading='lazy' src='../../".$dados['foto_perfil']."'>"?>
+			</figure>
+			<figcaption>Olá, <?php echo $dados['nome']?></figcaption>
+			<?php echo "<p>".$dados['email']."</p>" ?>
+		</div>
+		<nav>
+            <ul class="menu-hd flex-column center">
+				<li><a href="cursos-disponiveis.php">Disponiveis</a></li>
+				<li><a href="meus-cursos.php">Meus</a></li>
+				<li><a href="inscritos.php">Inscritos</a></li>
+				<li class="item-ativo"><a href="cadastro-curso.php">criar</a></li>
+				<li><a href="guardados.php">Guardados</a></li>
+			</ul>
+		</nav>
+	</section>
 	<section class="conteudo">
 		<?php require_once "../templates/header.php"?>
 		<section class="content-mk-curso">
