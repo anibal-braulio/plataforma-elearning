@@ -10,7 +10,6 @@ header li{
 	border: 1px solid white;
 }
 .body{
-	position: relative;
 	padding: 5px;
 	width: 100%;
 	height: 100vh;
@@ -19,9 +18,12 @@ header li{
 	position: fixed;
 }
 .menu-header{
+	background-color: #4caf50;
+	height: 100%;
+	left: 5px;
 	top: 28%;
 	color: white;
-	padding: 0px;
+	padding: 0px 9px;
 }
 .menu-header li{
 	padding-top: 10px;

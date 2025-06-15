@@ -99,7 +99,7 @@
 		 		</ul>
 		 	</nav>
 		</header>
-		<section class="container-cursos flex-column just-b">
+		<!--<section class="container-cursos flex-column just-b">
 			<section class="ranking flex-column center just-b">
 				<article>
 					<h2>Meus Pontos</h2>
@@ -117,7 +117,7 @@
 					<h2>Cursos Inscritos</h2>
 					<p>0</p>
 				</article>
-			</section>
+			</section>-->
 			<section class="content flex-column center">
 				<section class="flex-column content-2">
 					<div class="box-header flex-row center just-b">

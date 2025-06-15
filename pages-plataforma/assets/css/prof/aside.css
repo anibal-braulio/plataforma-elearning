@@ -1,8 +1,8 @@
 .aside{
-	position: sticky;
-	width: 160px;
-	height: 100vh;
+	position: relative;
 	background-color: #4caf50;
+	width: 160px;
+	height: 100%;
 	color: white;
 	padding: 10px 10px 0px 10px;
 }

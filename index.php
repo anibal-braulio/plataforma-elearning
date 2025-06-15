@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-		require_once "../backend/controllers/dbconexao.php";
+		require_once "backend/controllers/dbconexao.php";
 		session_start();
 		if(isset($_SESSION['erro'])){
 			echo "<div class='erro-php flex-column'>";
@@ -13,16 +13,16 @@
 <head>
 	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
 	<meta name="description" content="pagina de cadastro da plataforma Tocolearn">
-	<link type="text/css" rel="stylesheet" href="../assets/css/formulario.css">
-	<title>Tela de Cadastro</title>
-	<script type="text/javascript" src="../assets/js/jquery.js" defer></script>
-	<script type="text/javascript" src="../assets/js/cadastro.js" defer></script>
+	<link type="text/css" rel="stylesheet" href="assets/css/formulario.css">
+	<title>Formulario de acesso</title>
+	<script type="text/javascript" src="assets/js/jquery.js" defer></script>
+	<script type="text/javascript" src="assets/js/cadastro.js" defer></script>
 	<header>
-		<h1>Instituto Politecnico da Universidade Tocoista</h1>
+		<h1>Instituto Politecnico Tocoista</h1>
 		<h2>Plataforma de Eleatning</h2>
 	</header>
 	<section class="container ctn-login box-login">
-		<form action="../backend/controllers/dados-login.php" id="formLogin" class="form-login flex-column" method="GET">
+		<form action="backend/controllers/dados-login.php" id="formLogin" class="form-login flex-column" method="GET">
 			<fieldset><legend>Inicie sua Sessão</legend>
 				<label for="emailLogin">seu email ou numero:</label>
 				<input type="text" name="emailLogin" id="emailLogin" placeholder="exemple@gmail.com" min-length="3">
@@ -35,7 +35,7 @@
 		</form>
 	</section>
 	<section class="container ctn-cadastro oculto">
-		<form action="../backend/controllers/dados-cadastro.php" class="form-cadastro" method="POST" enctype="multipart/form-data">
+		<form action="backend/controllers/dados-cadastro.php" class="form-cadastro" method="POST" enctype="multipart/form-data">
 			<fieldset class="box-cadastro-um">
 			<div class="box box-1">
 				<legend>Cadastre-se no sistema</legend>
