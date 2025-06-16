@@ -47,34 +47,3 @@ saveBtn.addEventListener("click", () => {
     alert("Este vídeo já está guardado.");
   }
 });
-
-
-// const likeBtn = document.getElementById('likeBtn');
-// const commentBtn = document.getElementById('commentBtn');
-// const pipBtn = document.getElementById('pipBtn');
-// const commentBox = document.getElementById('commentBox');
-// const video = document.getElementById('videoPlayer');
-
-// let likes = 0;
-
-// likeBtn.addEventListener('click', () => {
-//   likes++;
-//   likeBtn.querySelector('span').innerText = likes;
-//   likeBtn.style.color = 'red';
-// });
-
-// commentBtn.addEventListener('click', () => {
-//   commentBox.style.display = commentBox.style.display === 'flex' ? 'none' : 'flex';
-// });
-
-// pipBtn.addEventListener('click', async () => {
-//   try {
-//     if (document.pictureInPictureElement) {
-//       await document.exitPictureInPicture();
-//     } else {
-//       await video.requestPictureInPicture();
-//     }
-//   } catch (error) {
-//     alert('Seu navegador não suporta Picture-in-Picture');
-//   }
-// });

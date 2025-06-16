@@ -1,0 +1,87 @@
+@import "prof-home.css";
+.chat-container {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .chat-header {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    position: relative;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .message.professor {
+    align-self: flex-start;
+    background-color: #e0f2f1;
+    color: #333;
+  }
+
+  .message.aluno {
+    align-self: flex-end;
+    background-color: #c8e6c9;
+    color: #333;
+  }
+
+  .chat-footer {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    background: #fff;
+  }
+
+  .chat-footer input[type="text"] {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+
+  .chat-footer button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .chat-footer button:hover {
+    background: #388e3c;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
