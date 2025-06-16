@@ -35,9 +35,6 @@
 					<li><a href="../professor/home.php">
 						Pagina inicial
 					</a></li>
-					<li><a href="#">
-						Dashboard
-					</a></li>
 					<li><a href="../professor/cursos-disponiveis.php">
 						Cursos
 					</a></li>

@@ -40,12 +40,21 @@ video {
 
 .botoes {
   display: flex;
+  align-items: center;
+  align-content: center;
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-
-.botoes button,
+.botoes figcaption{
+  margin: auto;
+  padding-left: 3px;
+}
+.botoes img{
+  width: 30px;
+  height: 30px;
+}
+.botoes button, 
 .botoes a {
   background: #4caf50;
   color: white;

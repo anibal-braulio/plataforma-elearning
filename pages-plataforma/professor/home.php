@@ -23,12 +23,6 @@
 						<figcaption>Pagina Inicial</figcaption>
 					</figure>
 				</a></li>
-				<li><a href="#">
-					<figure>
-						<img  class="voc" src="../assets/img/icons/dashboard.png" alt="icone de para acessar perfil">
-						<figcaption>dashboard</figcaption>
-					</figure>
-				</a></li>
 				<li><a href="cursos-disponiveis.php">
 					<figure>
 						<img src="../assets/img/icons/play@1.png" alt="icone de para acessar perfil">

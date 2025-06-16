@@ -190,8 +190,13 @@
 				<div class="botoes">
 					<button id="likeBtn">👍 <span id="likeCount"><?= $likes ?></span></button>
 					<button id="saveBtn">💾 Guardar para depois</button>
-					<a href="<?= $aula['url_aula']?>" download class="btn-download">⬇️ Baixar</a>
+					<a href="../../<?= $aula['url_aula']?>" download class="btn-download">⬇️ Baixar</a>
 					<button id="pipBtn">🖼️ PiP</button>
+					<button><figure class="flex-row center just-b">
+						<img src="../assets/img/icons/chat@50.png" alt="">
+						<figcaption>chat privado</figcaption>
+					</figure>
+					</button>
 				</div>
 				<p class="descricao"><strong>Descrição do Video: </strong><?= $aula['descricao'] ?></p>
 				<div class="comentarios">

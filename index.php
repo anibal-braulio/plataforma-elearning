@@ -92,7 +92,6 @@
 					<label>F <input type="radio" name="genero" value="F" ></label>
 					</label>
 					<label for="tipoConta" class="tipo">Tipo de Conta: <select name="tipoConta" id="tipoConta">
-						<option value="Professor">Professor</option>
 						<option value="Estudante">Estudante</option>
 					</select></label>
 				</div>

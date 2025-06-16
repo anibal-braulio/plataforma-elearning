@@ -48,7 +48,7 @@
 				$rs = mysqli_query($conexao, $sql);
 				if(mysqli_num_rows($rs) > 0){
 					$_SESSION['erro'] = "O email já existe, Crie um outro";
-					header("Location: ../../pages/formulario.php");
+					header("Location: ../../index.php");
 					return;
 				}else{
 					$_SESSION['erro'] = null;
@@ -57,17 +57,17 @@
 						/*echo "<h1>Usuario Cadastrado com sucesso!</h1>";
 						move_uploaded_file($temp, "../".$new_url);
 						echo "upload feito com sucesso";*/
-						header("Location: ../../pages/formulario.php");
+						header("Location: ../../index.php");
 						return;				
 			}
 			return;
 		}else{
 			$_SESSION['erro'] = "formato da imagem não é permitida";
-			header("Location: ../../pages/formulario.php");
+			header("Location: ../../index.php");
 			return;
 		}
 	}else{
 		$_SESSION['erro'] = "insira uma foto de perfil";
-		header("Location: ../../pages/formulario.php");
+		header("Location: ../../index.php");
 	}
  ?>
